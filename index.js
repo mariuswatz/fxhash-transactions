@@ -1,15 +1,17 @@
 import getActions from './query.js'
 import fs from 'fs'
 
+const userID='tz2NY3Fgt5QufrYGP1JKdvLKcWWt86sLsqrS';
+const endpoint = 'https://api.fxhash.xyz/graphql'
+
 async function main() {
   let user = {
-    id: 'tz2NY3Fgt5QufrYGP1JKdvLKcWWt86sLsqrS',
+    id: userID,
     skip: 0,
     take: 50,
     actions: [],
   }
 
-  let endpoint = 'https://api.fxhash.xyz/graphql'
 
   let ok = false
   do {
